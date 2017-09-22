@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>www.news.com</title>
+</head>
+<style type="text/css">
+*
+{
+	font-family : "STXingkai";
+	color:#00FF00;
+	font-size: 14px;
+}
+.title>p
+{ 
+	margin-left: 10%;
+	font-size: 45px;
+	color:#BDB76B;
+	box-sizing: border-box;
+}
+.title>form>.in
+{
+	
+	border:3px solid red;
+	border-bottom-right-radius: 2em;
+	outline-style:none;
+	width:560px;
+	height:38px;
+	box-sizing: border-box;
+	padding-left: 8px;
+}	
+.title>form>.search
+{
+	border:5px solid black;
+	width:67px;
+	height:40px;
+	font-size: 15px;
+	color:black;
+}
+.bbo>ul
+{
+	list-style-type:none;
+	margin-left: 5%;
+	margin-top: 5%;
+}
+	
+.bbo>ul>li>a
+{
+	font-size: 35px;
+	color:#FFEBCD;
+	font-style:italic;
+}
+.bbo>ul>li>a:hover
+{
+	color:#33FF99;
+}
+.bbo>ul>li>.a2
+{
+	margin-left: 10%;
+}
+.bbo>ul>li>.a3
+{
+	margin-left: 8%;
+}
+.bbo>ul>li>.a4
+{
+	margin-left: 10%;
+}	
+</style>
+<body background="back.jpg">
+	
+<div class="title">
+ <p>欢迎您进入新闻首页!^-^!</p>
+ <form action="search.php" method="post">
+ 	<input type="text" name="inn" class="in" value="请输入关键词">
+ 	<input type="submit" name="search" class="search" value="查找" >
+ 	</form>
+</div>
+<div class="bbo">
+	<ul>
+		<li><a class="a1" href="newsss.php">时事</a>
+		<a class="a2" href="cartoon.php">动漫</a></li>
+		<li><a class="a3" href="funnyy.php">搞笑</a>
+		<a class="a4" href="en.php">娱乐</a></li>
+	</ul>
+</div>
+</body>
+</html>
