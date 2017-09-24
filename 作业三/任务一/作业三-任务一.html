@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业三</title>
+</head>
+<style type="text/css">
+.ground
+{
+	height:409px;
+	width:308px;
+	padding:50px;
+	margin:50px auto;
+	background-image: url("backg.jpg");
+	border:10px solid #180000;
+	outline-style: ridge;/*凸起*/
+	background-size:308px*409px;
+}
+h1
+{
+	font-size: 28px;
+	font-style: italic;
+	color:	#880000;
+	font-family: "华文行楷"
+}
+.line2
+{
+	margin-left: 10%;
+}
+.line3
+{
+	margin-left: 50%;
+}
+form
+{
+	margin-top:150px;
+	margin-left: 20px;
+}
+li
+{
+	color:black;
+	font-style: solid;
+	font-family: "隶书";
+	font-size: 22px;
+	line-height: 50px;
+	list-style-type: none;/*无前面的点*/
+}
+input
+{
+	height:21px;
+	width: 150px;
+	padding-left: 10px;
+	outline:none;
+}
+.submit
+{
+	margin-top:8%;
+	margin-left: 40%;
+	height:30px;
+	width:50px;
+	background: black;
+	color:white;
+}
+.submit:hover
+{
+	margin-top:6%;
+	margin-left: 36%;
+	height:40px;
+	width:60px;
+	background: #880000;
+}
+</style>
+<script type="text/javascript">
+function judge(){
+ var userName=document.getElementById("name").value;
+ var password=document.getElementById("password").value;
+ var regUserName = /^[a-zA-Z0-9]+$/;
+ var regPassWord = /^[a-zA-Z/*/?]+$/;
+ if(userName.trim()=="" ||password.trim()=="")
+{
+	alert("注意：用户名或密码不能为空！");
+		return false;
+}
+else if(userName.length>12||password.length>24)
+{
+	alert("请填写正确的用户名和密码!(用户名最长12位,密码为24位)");
+	 return false;
+}
+ else if(!regUserName.test(userName))
+ {
+ 	alert("请填写正确的用户名!(最长12位,只能为数字或字母)");
+ 		return false;
+ }
+ else if(!regPassWord.test(password))
+ {
+ 	alert("请填写正确的密码!(最长24位,只能为数字或字母或？或*)");
+ 		return false;
+ }
+ else
+ {
+ 	alert("提交成功");
+ 	return true;
+ }
+}
+
+</script>
+<body background="back.gif";>
+<div class="ground">
+<h1 class="line1">欢迎</h1>
+<h1 class="line2">来到属于我们</h1>
+<h1 class="line3">的世界</h1>
+		<form onsubmit="return judge();">
+			<li>用户名:
+			<input  class="name" type="text" name="name" id="name"></li>
+			<li>密&nbsp;&nbsp;码:
+			<input  class="password" type="password" name="password" id="password"></li>
+			<input class="submit" type="submit">
+		</form>
+</div>
+</body>
+</html>
