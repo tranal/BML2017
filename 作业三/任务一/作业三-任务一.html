@@ -74,7 +74,7 @@ input
 function judge(){
  var userName=document.getElementById("name").value;
  var password=document.getElementById("password").value;
- var regUserName = /^[a-zA-Z0-9]+$/;
+ var regUserName=  /(?!^\d+$)(?!^[a-zA-Z]+$)^[0-9a-zA-Z]+$/;
  var regPassWord = /^[a-zA-Z/*/?]+$/;
  if(userName.trim()=="" ||password.trim()=="")
 {
@@ -83,17 +83,17 @@ function judge(){
 }
 else if(userName.length>12||password.length>24)
 {
-	alert("请填写正确的用户名和密码!(用户名最长12位,密码为24位)");
+	alert("请填写正确的用户名和密码位数!(用户名最长12位,密码为24位)");
 	 return false;
 }
  else if(!regUserName.test(userName))
  {
- 	alert("请填写正确的用户名!(最长12位,只能为数字或字母)");
+ 	alert("请填写正确的用户名!您的用户名中不正确(最长12位,只能为数字和字母)");
  		return false;
  }
  else if(!regPassWord.test(password))
  {
- 	alert("请填写正确的密码!(最长24位,只能为数字或字母或？或*)");
+ 	alert("请填写正确的密码!(最长24位,只能为字母或？或*)");
  		return false;
  }
  else
